@@ -1,0 +1,25 @@
+# Build directories
+build/
+install/
+log/
+
+# Python
+*.pyc
+__pycache__/
+*.egg
+*.egg-info/
+dist/
+
+# Range_libc specific
+slam/range_libc/pywrapper/dist/
+slam/range_libc/pywrapper/*.egg-info/
+slam/range_libc/pywrapper/*.egg
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# Documentation (auto-generated)
+**/docs/html/
+**/docs/xml/
