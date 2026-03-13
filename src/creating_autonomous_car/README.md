@@ -24,9 +24,9 @@ ROS2 Jazzy workspace for autonomous vehicle development.
 
 ```bash
 sudo apt update && sudo apt install -y git
-mkdir -p ~/creating_autonomous_car_ws/src
-cd ~/creating_autonomous_car_ws/src
-git clone https://github.com/HMCL-UNIST/creating_autonomous_car.git
+<!--mkdir -p ~/F1_tenth/src-->
+<!--cd ~/F1_tenth/src -->
+<!--git clone https://github.com/HMCL-UNIST/creating_autonomous_car.git-->
 cd creating_autonomous_car
 ```
 
@@ -38,7 +38,7 @@ cd creating_autonomous_car
 <br>
 
 ```bash
-~/creating_autonomous_car_ws/src/creating_autonomous_car/build_packages_on_local_pc.sh
+~/F1_tenth/src/creating_autonomous_car/build_packages_on_local_pc.sh
 ```
 
 After the script finishes, run `source ~/.bashrc` or open a new terminal.
@@ -60,7 +60,7 @@ Registered aliases in `~/.bashrc`:
 <br>
 
 ```bash
-~/creating_autonomous_car_ws/src/creating_autonomous_car/build_packages_on_car.sh
+~/F1_tenth/src/creating_autonomous_car/build_packages_on_car.sh
 ```
 
 After the script finishes, run `source ~/.bashrc` or open a new terminal.
@@ -82,7 +82,7 @@ Registered aliases in `~/.bashrc`:
 <br>
 
 ```bash
-cd ~/creating_autonomous_car_ws
+cd ~/F1_tenth
 
 # Install base tools
 sudo apt update
@@ -96,7 +96,7 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 
 # Install f1tenth_gym simulator (editable mode)
-pip install -e ~/creating_autonomous_car_ws/src/creating_autonomous_car/simulator/f1tenth_gym --break-system-packages
+pip install -e ~/F1_tenth/src/creating_autonomous_car/simulator/f1tenth_gym --break-system-packages
 
 # Install transforms3d (required by simulator bridge)
 pip install transforms3d --break-system-packages
@@ -108,15 +108,15 @@ pip install --upgrade coverage --break-system-packages
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 # Source workspace
-source ~/creating_autonomous_car_ws/install/setup.bash
-echo "source ~/creating_autonomous_car_ws/install/setup.bash" >> ~/.bashrc
+source ~/F1_tenth/install/setup.bash
+echo "source ~/F1_tenth/install/setup.bash" >> ~/.bashrc
 ```
 
 **(Optional)** Add useful aliases to `~/.bashrc`:
 
 ```bash
-echo "alias cb='cd ~/creating_autonomous_car_ws && colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release'" >> ~/.bashrc
-echo "alias sauce='source ~/creating_autonomous_car_ws/install/setup.bash'" >> ~/.bashrc
+echo "alias cb='cd ~/F1_tenth && colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release'" >> ~/.bashrc
+echo "alias sauce='source ~/F1_tenth/install/setup.bash'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 echo "alias gb='gedit ~/.bashrc'" >> ~/.bashrc
 ```
@@ -182,7 +182,7 @@ Expected output: an empty table with column headers (no permission errors).
 Run the build script from anywhere:
 
 ```bash
-~/creating_autonomous_car_ws/src/creating_autonomous_car/build_docker.sh
+~/F1_tenth/src/creating_autonomous_car/build_docker.sh
 ```
 
 This script will:
