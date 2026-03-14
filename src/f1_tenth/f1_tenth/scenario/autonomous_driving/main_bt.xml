@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4">
+  <BehaviorTree ID="main">
+    <Sequence>
+      <DriveForward2s/>
+    </Sequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="DriveForward2s"
+            editable="true"/>
+  </TreeNodesModel>
+
+</root>
