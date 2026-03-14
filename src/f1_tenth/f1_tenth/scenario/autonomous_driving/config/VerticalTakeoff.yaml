@@ -1,0 +1,6 @@
+bt_runner:
+  ros__parameters:    
+    drone:            
+      position_x: 0.0
+      position_y: 0.0
+      position_z: 15.0
